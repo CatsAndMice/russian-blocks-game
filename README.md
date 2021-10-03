@@ -1,7 +1,11 @@
-# Vue 3 + Vite
+# Vue 3 + Vite + Jsx实现俄罗斯方块
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Task拆分
 
-## Recommended IDE Setup
+- [x] 搭建项目，支持jsx
+- [x] 页面布局,游戏界面静态绘制
+- [x] 绘制静态方块
+- [x] 方块自动向下移动
+- [ ] 鼠标左右控制方块运动
+- [ ] 方块超出边界做处理
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
