@@ -1,9 +1,9 @@
+import {rotate} from './box' 
+
 export const gameRow = 16;
 export const gameCol = 16;
 //运动时间
 export const moveTime = 1000;
-
-
 export const boxInfos = {
     1: {
         shape: [
@@ -18,7 +18,7 @@ export const boxInfos = {
             [1, 1, 0],
             [0, 1, 0],
         ],
-        // rotateStrategy: [rotate, (m) => rotate(rotate(rotate(m)))],
+        rotateStrategy: [rotate, (m) => rotate(rotate(rotate(m)))],
     },
     3: {
         shape: [
@@ -26,6 +26,6 @@ export const boxInfos = {
             [1, 0, 0],
             [1, 1, 0],
         ],
-        // rotateStrategy: [rotate, rotate, rotate, rotate],
+        rotateStrategy: [rotate, rotate, rotate, rotate],
     },
 };

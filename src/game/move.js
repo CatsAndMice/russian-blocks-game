@@ -1,6 +1,6 @@
 import { moveTime } from "./config"
 import { getBottomPoint } from "./matrix";
-import { addBoxToMap } from "./map"
+import { addBoxToMap,clearMapLine } from "./map"
 import { startBox } from "./index"
 
 //方块到最底部 
@@ -29,8 +29,8 @@ export function moveDown(box, map) {
         //下落到最底部,固定方块
         addBoxToMap(box, map);
 
-        //下落其他方块的身上,固定方块
-
+        //清除占满的方块
+        clearMapLine(map)
 
         //创建一个新方块
         startBox();

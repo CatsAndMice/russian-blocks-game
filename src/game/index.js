@@ -20,16 +20,20 @@ export function startGame(map) {
         if (isDown(n)) {
             moveDown(box, map)
         }
-        
+
         render(box, map);
     })
     window.addEventListener('keydown', (e) => {
+        console.log(e.code);
         switch (e.code) {
             case "ArrowLeft":
                 box.x--;
                 break;
             case "ArrowRight":
                 box.x++;
+                break;
+            case "ArrowUp":
+                box.rotate()
                 break;
             default:
                 break

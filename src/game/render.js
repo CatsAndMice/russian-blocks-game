@@ -13,7 +13,7 @@ export default function render(box, map) {
     for (let y = 0; y < shape.length; y++) {
         for (let x = 0; x < shape[y].length; x++) {
             if (shape[y][x] > 0) {
-                map[box.y + y][box.x + x] = shape[y][x];
+                map[box.y + y][box.x + x] = 1;
             }
 
         }

@@ -22,7 +22,22 @@ export function addBoxToMap(box, map) {
     }
 }
 
-export function resetMap(map = []) {
-    map.length = 0;
-    initMap(map);
+
+//清除占满的地图
+export function clearMapLine(map) {
+    let clearLines = []
+    map.forEach((m, i) => {
+        let isEvery = m.every(v => {
+            return v === -1;
+        })
+        if (isEvery) clearLines.push(i)
+    })
+
+    //将占满的地图循环删除
+    clearLines.forEach(line => {
+        map.splice(line, 1)
+
+        //保持地图大小不变
+        map.unshift(new Array(gameCol).fill(0))
+    })
 }
