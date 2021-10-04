@@ -2,6 +2,7 @@ import { defineComponent, toRefs, computed } from "vue";
 import "../assets/box.css";
 
 const colorMap = {
+    [-1]: "red",
     [0]: "gray",
     [1]: "red",
 }
@@ -19,7 +20,7 @@ export default defineComponent({
         let color = computed(() => colorMap[type.value])
         return () => {
             return (
-                <div className="box" style={{ "backgroundColor": color.value }} ></div>
+                <div className="box" style={{ "backgroundColor": color.value }} >{type.value}</div>
             )
         }
     }

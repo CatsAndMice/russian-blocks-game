@@ -5,8 +5,7 @@ let start = Date.now();
 function tirggerTick() {
     //没有达到方块下滑的条件，也要时刻触发渲染地图,
     ticks.forEach(tick => tick(Date.now() - start))
-
-    start = (Date.now() - start) > moveTime ? Date.now() : start;
+    start = Date.now();
 
     requestAnimationFrame(tirggerTick);
 }

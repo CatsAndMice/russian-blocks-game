@@ -3,10 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build --mode development",
     "serve": "vite preview"
   },
   "dependencies": {
+    "@lihai-js/tool": "^2.0.3",
     "vue": "^3.2.16"
   },
   "devDependencies": {
